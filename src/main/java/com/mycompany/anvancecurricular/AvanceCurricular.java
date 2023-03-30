@@ -34,6 +34,9 @@ public class AvanceCurricular {
                 case 2:{
                    ac.agregarAsignatura();
                 } 
+                case 3:{
+                    ac.mostrarDatosEstudiante();
+                }
                 case 0:{
                     System.out.println("Programa finalizado.");
                     break;
