@@ -8,12 +8,13 @@ package com.mycompany.anvancecurricular;
  *
  * @author seba
  */
-public class Asignaturas {
+public class Asignatura {
     private String nombreAsignatura;
+    
     private String idAsignatura;
 
 
-    public Asignaturas(String nombreAsignatura, String idAsignatura) {
+    public Asignatura(String nombreAsignatura, String idAsignatura) {
         this.nombreAsignatura = nombreAsignatura;
         this.idAsignatura = idAsignatura;
     }

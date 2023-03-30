@@ -12,10 +12,20 @@ import java.util.*;
  */
 public class Estudiante {
     private String nombreEstudiante;
-    private HashMap <String,Asignaturas> asignaturasAprobadas = new HashMap();
+    private ArrayList<Asignatura> asignaturasAprobadas = new ArrayList();
     //private HashMap <String,Asignaturas> asignaturasVigentes = new HashMap();
     private int añoIngreso;
     private String rut;
+    
+    
+    /*public HashMap<String, Asignaturas> getAsignaturasVigentes() {
+        return asignaturasVigentes;
+    }
+
+    
+    public void setAsignaturasVigentes(HashMap<String, Asignaturas> asignaturasVigentes) {
+        this.asignaturasVigentes = asignaturasVigentes;
+    }*/  
 
     public Estudiante(String nombreEstudiante, int añoIngreso, String rut) {
         this.nombreEstudiante = nombreEstudiante;
@@ -23,6 +33,14 @@ public class Estudiante {
         this.rut = rut;
     }
 
+    public ArrayList<Asignatura> getAsignaturasAprobadas() {
+        return asignaturasAprobadas;
+    }
+
+    public void setAsignaturasAprobadas(ArrayList<Asignatura> asignaturasAprobadas) {
+        this.asignaturasAprobadas = asignaturasAprobadas;
+    }
+    
     public String getNombreEstudiante() {
         return nombreEstudiante;
     }
@@ -30,23 +48,7 @@ public class Estudiante {
     public void setNombreEstudiante(String nombreEstudiante) {
         this.nombreEstudiante = nombreEstudiante;
     }
-
-    public HashMap<String, Asignaturas> getAsignaturasAprobadas() {
-        return asignaturasAprobadas;
-    }
-
-    public void setAsignaturasAprobadas(HashMap<String, Asignaturas> asignaturasAprobadas) {
-        this.asignaturasAprobadas = asignaturasAprobadas;
-    }
-
-    /*public HashMap<String, Asignaturas> getAsignaturasVigentes() {
-        return asignaturasVigentes;
-    }
-
-    public void setAsignaturasVigentes(HashMap<String, Asignaturas> asignaturasVigentes) {
-        this.asignaturasVigentes = asignaturasVigentes;
-    }*/
-
+    
     public int getAñoIngreso() {
         return añoIngreso;
     }
@@ -62,6 +64,10 @@ public class Estudiante {
     public void setRut(String rut) {
         this.rut = rut;
     }
-
+    
+    public void agregarAsignaturas(String nombre, String id){
+        Asignatura asignatura = new Asignatura(nombre, id);
+        asignaturasAprobadas.add(asignatura);
+    }
     
 }
